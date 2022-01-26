@@ -11,6 +11,10 @@ public struct WeakLinkTest {
         // Right?
         // We may need to make the checks below the symbol introduction version.
         // (Not just below our deployment target.)
-        return TKTokenWatcher().tokenIDs
+        if #available(iOS 13.0, *) {
+            return TKTokenWatcher().tokenIDs
+        } else {
+            return []
+        }
     }
 }
