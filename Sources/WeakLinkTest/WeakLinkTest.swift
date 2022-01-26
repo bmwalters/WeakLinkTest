@@ -1,6 +1,8 @@
 import CryptoTokenKit
 
+@available(iOS 13.0, *)
 public struct WeakLinkTest {
+    @available(iOS 13.0, *)
     public func doTest() -> [String] {
         // Why is the availability modifier for this symbol iOS 10.0 if CryptoTokenKit framework is documented as iOS 13.0?
         // Is this some weird artifact of CryptoTokenKit previously being a private framework?
